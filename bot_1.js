@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "+";
-var adminprefix = '+'
+var prefix = "#";
+var adminprefix = '!'
 
 client.on("message", async message => {
         if(!message.channel.guild) return;
@@ -280,7 +280,7 @@ if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return mess
  
 });
 
-const developers = ["472413769700474901","id"]
+const developers = ["455288398249328650","id"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
