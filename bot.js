@@ -39,7 +39,7 @@ client.on("message", async message => {
     });
 
 client.on('message', function(message) {
-    if (message.content == "+clear") {
+    if (message.content == "#clear") {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
             message.channel.fetchMessages()
                .then(function(list){
@@ -71,7 +71,7 @@ message.author.send(`**مدة الرابط : يـوم
 
 client.on('message', message => {
 
-    if (message.content === "+mc") {
+    if (message.content === "#mc") {
                         if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
@@ -79,10 +79,10 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
          SEND_MESSAGES: false
 
            }).then(() => {
-               message.reply("تم تقفيل الشات ? ")
+               message.reply("**تم تقفيل الشات ** ")
            });
              }
-if (message.content === "+umc") {
+if (message.content === "#umc") {
     if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -90,7 +90,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
          SEND_MESSAGES: true
 
            }).then(() => {
-               message.reply("تم فتح الشات?")
+               message.reply("**تم فتح الشات**")
            });
              }
 
