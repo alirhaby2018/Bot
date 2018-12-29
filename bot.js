@@ -51,7 +51,7 @@ client.on('message', function(message) {
 });
 	
   client.on('message', message => {
-    if (message.content.startsWith("+link")) {
+    if (message.content.startsWith("#link")) {
 
   message.channel.createInvite({
         thing: true,
@@ -280,7 +280,7 @@ if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return mess
  
 });
 
-const developers = ["455288398249328650","id"]
+const developers = ["269360753721475072","id"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
